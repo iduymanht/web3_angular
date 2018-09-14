@@ -1,0 +1,84 @@
+<div class="animated fadeIn">
+    <div class="row">
+         <!--/.col-->
+         <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">
+                        <strong>Ethereum Account</strong>
+                        <!-- <small>Form</small> -->
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group row">
+                            <div class="col-md-12">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Username" readonly="true" value="{{transferFrom}}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-12">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fa fa-euro"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="" value="{{balance}}" readonly="true">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/.col-->
+        <div class="col-sm-6">
+            <form>
+                <div class="card">
+                    <div class="card-header">
+                        <strong>Send Ethereum</strong>
+                        <!-- <small>Form</small> -->
+                    </div>
+                    <div class="card-body">
+                        <!--.row-->
+                        <div class="form-group row">
+                            <div class="col-md-12">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Tranfer To" [(ngModel)]="transferTo" name="transferTo" required>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/.row-->
+                        <!--.row-->
+                        <div class="form-group row">
+                            <div class="col-md-12">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fa fa-euro"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Amount in Ether" [(ngModel)]="amount" name="amount" required>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/.row-->
+                        <div class="form-group row">
+                            <label class="col-md-2 col-form-label" for="textarea-input">Remarks</label>
+                            <div class="col-md-10">
+                                <textarea name="remarks" rows="9" class="form-control" placeholder="Enter Remarks..." [(ngModel)]="remarks"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-sm btn-primary" (click)="transferEther($event)"><i class="fa fa-dot-circle-o"></i>
+                            Submit
+                        </button>
+                        <button type="reset" class="btn btn-sm btn-danger resetbtn"><i class="fa fa-ban"></i> Reset</button>
+                    </div>
+                </div>
+            </form>
+        </div>       
+    </div>
+</div>
